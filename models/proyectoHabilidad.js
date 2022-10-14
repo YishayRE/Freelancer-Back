@@ -9,7 +9,12 @@ const ProyectoHabilidadSchema = Schema({
     habilidad: {
         type: String,
         required: [true, 'La habilidad es obligatoria']
-    }
+    },
+    estado: {
+        type: Boolean,
+        default: true,
+        required: true
+    },
 });
 
 ProyectoHabilidadSchema.methods.toJSON = function() {

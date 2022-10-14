@@ -4,6 +4,7 @@ import fileUpload from 'express-fileupload';
 import { createServer } from 'http';
 
 import * as routes from '../routes/index.js';
+import dbConnection from '../database/config.js';
 
 class Server {
     constructor() {
@@ -39,6 +40,7 @@ class Server {
 
     async conectarDB() {
         //Function from /database/config.js
+        await dbConnection.dbConnection();
     }
 
     middlewares() {

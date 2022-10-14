@@ -22,7 +22,12 @@ const UsuarioSchema = Schema({
     apellidoM: {
         type: String,
         required: [true, 'El apellido materno es obligatorio']
-    }
+    },
+    estado: {
+        type: Boolean,
+        default: true,
+        required: true
+    },
 });
 
 UsuarioSchema.methods.toJSON = function() {

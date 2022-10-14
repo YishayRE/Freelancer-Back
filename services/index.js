@@ -1,1 +1,5 @@
-//External services (others API's, DB, etc)
+import * as mongo from './mongo/index.js';
+
+export {
+    mongo
+}

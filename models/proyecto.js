@@ -2,7 +2,7 @@ import pkg from 'mongoose';
 const { Schema, model } = pkg;
 
 const ProyectoSchema = Schema({
-    proyecto: {
+    empleador: {
         type: Schema.Types.ObjectId,
         ref: 'Empleador',
     },
@@ -25,6 +25,11 @@ const ProyectoSchema = Schema({
     vacantes: {
         type: String,
         required: [true, 'Las vacantes son obligatorias']
+    },
+    estado: {
+        type: Boolean,
+        default: true,
+        required: true
     },
 });
 

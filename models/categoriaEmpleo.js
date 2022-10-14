@@ -10,7 +10,12 @@ const CategoriaEmpleoSchema = Schema({
     habilidades: {
         type: Array,
         required: [true, 'Las habilidades son obligatorias']
-    }
+    },
+    estado: {
+        type: Boolean,
+        default: true,
+        required: true
+    },
 });
 
 CategoriaEmpleoSchema.methods.toJSON = function() {

@@ -23,7 +23,12 @@ const EmpleadorSchema = Schema({
     razon_social: {
         type: String,
         required: [true, 'La razón social es obligatoria']
-    }
+    },
+    estado: {
+        type: Boolean,
+        default: true,
+        required: true
+    },
 });
 
 EmpleadorSchema.methods.toJSON = function() {

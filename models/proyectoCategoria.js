@@ -9,7 +9,12 @@ const ProyectoCategoriaSchema = Schema({
     categoria: {
         type: Schema.Types.ObjectId,
         ref: 'Categoria',
-    }
+    },
+    estado: {
+        type: Boolean,
+        default: true,
+        required: true
+    },
 });
 
 ProyectoCategoriaSchema.methods.toJSON = function() {

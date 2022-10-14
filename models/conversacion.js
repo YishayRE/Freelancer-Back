@@ -12,13 +12,18 @@ const ConversacionSchema = Schema({
         ref: 'Usuario',
         required: true
     },
-    empleado: {
+    empleador: {
         type: Schema.Types.ObjectId,
         ref: 'Empleador',
         required: true
     },
     mensaje: {
         type: Array
+    },
+    estado: {
+        type: Boolean,
+        default: true,
+        required: true
     },
 });
 
