@@ -1,11 +1,14 @@
 {
-    "name": "Project Desing",
-    "version": "1.0.0",
-    "description": "NodeJS project desing",
+    "name": "freelance_api",
+    "version": "0.1.0",
+    "description": "Freelance API para las peticiones comunes, socket viene aparte",
     "main": "app.js",
     "type": "module",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app.js",
+        "dev": "nodemon app.js",
+        "build": "npm i"
     },
     "repository": {
         "type": "git",
