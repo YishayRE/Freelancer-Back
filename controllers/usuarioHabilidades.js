@@ -9,7 +9,7 @@ const obtenerUsuarioHabilidad = async (req = request, res = response) => {
     res.status(200).json(usuarioHabilidad);
 }
 
-const obtenerUsuarioHabilidadHabilidades = async (req = request, res = response) => {
+const obtenerUsuarioHabilidades = async (req = request, res = response) => {
     const query = { estado: true };
 
     const usuarioHabilidadHabilidades = await services.mongo.usuarioHabilidades.getUsuarioHabilidad(null, query); 
@@ -43,7 +43,7 @@ const eliminarUsuarioHabilidad = async (req = request, res = response) => {
 
 export {
     obtenerUsuarioHabilidad,
-    obtenerUsuarioHabilidadHabilidades,
+    obtenerUsuarioHabilidades,
     crearUsuarioHabilidad,
     actualizarUsuarioHabilidad,
     eliminarUsuarioHabilidad

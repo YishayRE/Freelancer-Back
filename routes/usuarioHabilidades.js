@@ -1,14 +1,24 @@
 import { Router } from 'express';
 
-import { examples } from '../controllers/index.js';
+import { usuarioHabilidades } from '../controllers/index.js';
 
 const router = Router();
 
 /**
- * {{url}}/api/examples
+ * {{url}}/api/usuarioHabilidades
  */
 
-//  Route example
-router.get('/', examples.example);
+// Obtener usuarioHabilidades Privado/Admin
+router.get('/', usuarioHabilidades.obtenerUsuarioHabilidades);
+router.get('/obtener', usuarioHabilidades.obtenerUsuarioHabilidad);
+
+// Crear usuarioHabilidad Publico
+router.post('/crear', usuarioHabilidades.crearUsuarioHabilidad);
+
+// Actualizar usuarioHabilidad Privado/Admin
+router.put('/actualizar', usuarioHabilidades.actualizarUsuarioHabilidad);
+
+// Eliminar usuarioHabilidad Privado/Admin
+router.delete('/eliminar', usuarioHabilidades.eliminarUsuarioHabilidad);
 
 export { router };
