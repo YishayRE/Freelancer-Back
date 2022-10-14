@@ -1,8 +1,8 @@
 <p align="center">
-  <a href="" rel="noopener">
+  <a href="https://nodejs.org/en/" rel="noopener">
  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1280px-Node.js_logo.svg.png" alt="Project logo"></a>
 </p>
-<h3 align="center">Project Desing</h3>
+<h3 align="center">Freelancer Rest API</h3>
 
 <div align="center">
 

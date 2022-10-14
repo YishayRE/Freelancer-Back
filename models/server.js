@@ -12,7 +12,16 @@ class Server {
         this.server = createServer(this.app);
 
         this.paths = {
-            example: '/api/example'
+            categoriaEmpleo: '/api/categoriaEmpleo',
+            conversacion: '/api/conversacion',
+            empleador: '/api/empleador',
+            example: '/api/example',
+            proyecto: '/api/proyecto',
+            proyectoCategoria: '/api/proyectoCategoria',
+            proyectoHabilidad: '/api/proyectoHabilidad',
+            usuario: '/api/usuario',
+            usuarioCategoria: '/api/usuarioCategoria',
+            usuarioHabilidad: '/api/usuarioHabilidad'
         }
 
         // Conectar a base de datos
@@ -51,7 +60,16 @@ class Server {
     }
 
     routes() {
+        this.app.use(this.paths.categoriaEmpleo, routes.categoriaEmpleos);
+        this.app.use(this.paths.conversacion, routes.conversaciones);
+        this.app.use(this.paths.empleador, routes.empleadores);
         this.app.use(this.paths.example, routes.examples);
+        this.app.use(this.paths.proyectoCategoria, routes.proyectoCategorias);
+        this.app.use(this.paths.proyectoHabilidad, routes.proyectoHabilidades);
+        this.app.use(this.paths.proyecto, routes.proyectos);
+        this.app.use(this.paths.usuarioCategoria, routes.usuarioCategorias);
+        this.app.use(this.paths.usuarioHabilidad, routes.usuarioHabilidades);
+        this.app.use(this.paths.usuario, routes.usuarios);
     }
 
     crons() {
