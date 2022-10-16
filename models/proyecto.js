@@ -2,9 +2,9 @@ import pkg from 'mongoose';
 const { Schema, model } = pkg;
 
 const ProyectoSchema = Schema({
-    empleador: {
+    usuario: {
         type: Schema.Types.ObjectId,
-        ref: 'Empleador',
+        ref: 'Usuario',
     },
     nombre: {
         type: String,

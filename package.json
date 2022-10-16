@@ -1,6 +1,6 @@
 {
     "name": "freelance_api",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Freelance API para las peticiones comunes, socket viene aparte",
     "main": "app.js",
     "type": "module",

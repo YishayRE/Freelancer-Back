@@ -18,17 +18,17 @@ const obtenerUsuarios = async (req = request, res = response) => {
 }
 
 const crearUsuario = async (req = request, res = response) => {
-    const { email, password, nombre, apellidoP, apellidoM } = req.body;
+    const { email, password, nombre, rol } = req.body;
 
-    const usuario = await services.mongo.usuarios.postUsuario({ email, password, nombre, apellidoP, apellidoM });
+    const usuario = await services.mongo.usuarios.postUsuario({ email, password, nombre, rol });
 
     res.status(200).json(usuario);
 }
 
 const actualizarUsuario = async (req = request, res = response) => {
-    const { email, password, nombre, apellidoP, apellidoM, id } = req.body;
+    const { email, password, nombre, rol, id } = req.body;
 
-    const usuario = await services.mongo.usuarios.putUsuario(id, { email, password, nombre, apellidoP, apellidoM });
+    const usuario = await services.mongo.usuarios.putUsuario(id, { email, password, nombre, rol });
 
     res.status(200).json(usuario);
 }

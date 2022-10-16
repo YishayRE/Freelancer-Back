@@ -7,14 +7,14 @@ const ConversacionSchema = Schema({
         ref: 'Proyecto',
         required: true
     },
-    usuario: {
+    freelancer: {
         type: Schema.Types.ObjectId,
         ref: 'Usuario',
         required: true
     },
     empleador: {
         type: Schema.Types.ObjectId,
-        ref: 'Empleador',
+        ref: 'Usuario',
         required: true
     },
     mensaje: {

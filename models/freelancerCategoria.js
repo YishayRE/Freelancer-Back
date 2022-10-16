@@ -1,7 +1,7 @@
 import pkg from 'mongoose';
 const { Schema, model } = pkg;
 
-const UsuarioCategoriaSchema = Schema({
+const FreelancerCategoriaSchema = Schema({
     usuario: {
         type: Schema.Types.ObjectId,
         ref: 'Usuario',
@@ -17,9 +17,9 @@ const UsuarioCategoriaSchema = Schema({
     },
 });
 
-UsuarioCategoriaSchema.methods.toJSON = function() {
-    const { __v, ...usuarioCategoria } = this.toObject();
-    return usuarioCategoria;
+FreelancerCategoriaSchema.methods.toJSON = function() {
+    const { __v, ...freelancerCategoria } = this.toObject();
+    return freelancerCategoria;
 }
 
-export default model('UsuarioCategoria', UsuarioCategoriaSchema);
+export default model('FreelancerCategoria', FreelancerCategoriaSchema);

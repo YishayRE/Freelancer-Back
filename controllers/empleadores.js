@@ -18,17 +18,17 @@ const obtenerEmpleadores = async (req = request, res = response) => {
 }
 
 const crearEmpleador = async (req = request, res = response) => {
-    const { email, password, nombre, rfc, razon_social } = req.body;
+    const { usuario, rfc, razon_social } = req.body;
 
-    const empleador = await services.mongo.empleadores.postEmpleador({ email, password, nombre, rfc, razon_social });
+    const empleador = await services.mongo.empleadores.postEmpleador({ usuario, rfc, razon_social });
 
     res.status(200).json(empleador);
 }
 
 const actualizarEmpleador = async (req = request, res = response) => {
-    const { email, password, nombre, rfc, razon_social, id } = req.body;
+    const { usuario, rfc, razon_social, id } = req.body;
 
-    const empleador = await services.mongo.empleadores.putEmpleador(id, { email, password, nombre, rfc, razon_social });
+    const empleador = await services.mongo.empleadores.putEmpleador(id, { usuario, rfc, razon_social });
 
     res.status(200).json(empleador);
 }

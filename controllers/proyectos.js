@@ -18,17 +18,17 @@ const obtenerProyectos = async (req = request, res = response) => {
 }
 
 const crearProyecto = async (req = request, res = response) => {
-    const { empleador, nombre, descripcion, duracion, inicio, vacantes } = req.body;
+    const { usuario, nombre, descripcion, duracion, inicio, vacantes } = req.body;
 
-    const proyecto = await services.mongo.proyectos.postProyecto({ empleador, nombre, descripcion, duracion, inicio, vacantes });
+    const proyecto = await services.mongo.proyectos.postProyecto({ usuario, nombre, descripcion, duracion, inicio, vacantes });
 
     res.status(200).json(proyecto);
 }
 
 const actualizarProyecto = async (req = request, res = response) => {
-    const { empleador, nombre, descripcion, duracion, inicio, vacantes, id } = req.body;
+    const { usuario, nombre, descripcion, duracion, inicio, vacantes, id } = req.body;
 
-    const proyecto = await services.mongo.proyectos.putProyecto(id, { empleador, nombre, descripcion, duracion, inicio, vacantes });
+    const proyecto = await services.mongo.proyectos.putProyecto(id, { usuario, nombre, descripcion, duracion, inicio, vacantes });
 
     res.status(200).json(proyecto);
 }

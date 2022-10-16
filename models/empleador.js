@@ -2,19 +2,6 @@ import pkg from 'mongoose';
 const { Schema, model } = pkg;
 
 const EmpleadorSchema = Schema({
-    email: {
-        type: String,
-        required: [true, 'El email es obligatorio'],
-        unique: true
-    },
-    password: {
-        type: String,
-        required: [true, 'El password es obligatorio']
-    },
-    nombre: {
-        type: String,
-        required: [true, 'El nombre es obligatorio']
-    },
     rfc: {
         type: String,
         required: [true, 'El RFC es obligatorio'],
@@ -23,6 +10,11 @@ const EmpleadorSchema = Schema({
     razon_social: {
         type: String,
         required: [true, 'La razón social es obligatoria']
+    },
+    usuario: {
+        type: Schema.Types.ObjectId,
+        ref: 'Usuario',
+        required: true
     },
     estado: {
         type: Boolean,

@@ -15,13 +15,10 @@ const UsuarioSchema = Schema({
         type: String,
         required: [true, 'El nombre es obligatorio']
     },
-    apellidoP: {
+    rol: {
         type: String,
-        required: [true, 'El apellido paterno es obligatorio']
-    },
-    apellidoM: {
-        type: String,
-        required: [true, 'El apellido materno es obligatorio']
+        required: [true, 'El rol es obligatorio'],
+        enum: ['FREELANCER', 'EMPLEADOR']
     },
     estado: {
         type: Boolean,

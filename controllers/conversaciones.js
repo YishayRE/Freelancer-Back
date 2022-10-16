@@ -18,17 +18,17 @@ const obtenerConversaciones = async (req = request, res = response) => {
 }
 
 const crearConversacion = async (req = request, res = response) => {
-    const { proyecto, usuario, empleador, mensaje, estado } = req.body;
+    const { proyecto, freelancer, empleador, mensaje } = req.body;
 
-    const conversacion = await services.mongo.conversaciones.postConversacion({ proyecto, usuario, empleador, mensaje, estado });
+    const conversacion = await services.mongo.conversaciones.postConversacion({ proyecto, freelancer, empleador, mensaje });
 
     res.status(200).json(conversacion);
 }
 
 const actualizarConversacion = async (req = request, res = response) => {
-    const { proyecto, usuario, empleador, mensaje, estado, id } = req.body;
+    const { proyecto, freelancer, empleador, mensaje, estado, id } = req.body;
 
-    const conversacion = await services.mongo.conversaciones.putConversacion(id, { proyecto, usuario, empleador, mensaje, estado });
+    const conversacion = await services.mongo.conversaciones.putConversacion(id, { proyecto, freelancer, empleador, mensaje, estado });
 
     res.status(200).json(conversacion);
 }
