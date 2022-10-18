@@ -10,15 +10,15 @@ const router = Router();
 
 // Obtener proyectoCategorias Privado/Admin
 router.get('/', proyectoCategorias.obtenerProyectoCategorias);
-router.get('/obtener', proyectoCategorias.obtenerProyectoCategoria);
+router.get('/unico/', proyectoCategorias.obtenerProyectoCategoria);
 
 // Crear proyectoCategoria Publico
-router.post('/crear', proyectoCategorias.crearProyectoCategoria);
+router.post('/', proyectoCategorias.crearProyectoCategoria);
 
 // Actualizar proyectoCategoria Privado/Admin
-router.put('/actualizar', proyectoCategorias.actualizarProyectoCategoria);
+router.put('/', proyectoCategorias.actualizarProyectoCategoria);
 
 // Eliminar proyectoCategoria Privado/Admin
-router.delete('/eliminar', proyectoCategorias.eliminarProyectoCategoria);
+router.delete('/', proyectoCategorias.eliminarProyectoCategoria);
 
 export { router };

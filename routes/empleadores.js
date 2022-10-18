@@ -10,15 +10,15 @@ const router = Router();
 
 // Obtener empleadores Privado/Admin
 router.get('/', empleadores.obtenerEmpleadores);
-router.get('/obtener', empleadores.obtenerEmpleador);
+router.get('/unico/', empleadores.obtenerEmpleador);
 
 // Crear empleador Publico
-router.post('/crear', empleadores.crearEmpleador);
+router.post('/', empleadores.crearEmpleador);
 
 // Actualizar empleador Privado/Admin
-router.put('/actualizar', empleadores.actualizarEmpleador);
+router.put('/', empleadores.actualizarEmpleador);
 
 // Eliminar empleador Privado/Admin
-router.delete('/eliminar', empleadores.eliminarEmpleador);
+router.delete('/', empleadores.eliminarEmpleador);
 
 export { router };

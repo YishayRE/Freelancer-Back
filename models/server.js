@@ -77,7 +77,7 @@ class Server {
     }
 
     crons() {
-        //crons();
+        //rutinas programadas
     }
 
     listen() {

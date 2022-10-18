@@ -8,7 +8,7 @@ const FreelancerCategoriaSchema = Schema({
     },
     categoria: {
         type: Schema.Types.ObjectId,
-        ref: 'Categoria',
+        ref: 'CategoriaEmpleo',
     },
     estado: {
         type: Boolean,

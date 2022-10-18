@@ -10,15 +10,15 @@ const router = Router();
 
 // Obtener freelancerHabilidades Privado/Admin
 router.get('/', freelancerHabilidades.obtenerFreelancerHabilidades);
-router.get('/obtener', freelancerHabilidades.obtenerFreelancerHabilidad);
+router.get('/unico/', freelancerHabilidades.obtenerFreelancerHabilidad);
 
 // Crear freelancerHabilidad Publico
-router.post('/crear', freelancerHabilidades.crearFreelancerHabilidad);
+router.post('/', freelancerHabilidades.crearFreelancerHabilidad);
 
 // Actualizar freelancerHabilidad Privado/Admin
-router.put('/actualizar', freelancerHabilidades.actualizarFreelancerHabilidad);
+router.put('/', freelancerHabilidades.actualizarFreelancerHabilidad);
 
 // Eliminar freelancerHabilidad Privado/Admin
-router.delete('/eliminar', freelancerHabilidades.eliminarFreelancerHabilidad);
+router.delete('/', freelancerHabilidades.eliminarFreelancerHabilidad);
 
 export { router };

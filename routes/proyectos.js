@@ -10,15 +10,15 @@ const router = Router();
 
 // Obtener proyectos Privado/Admin
 router.get('/', proyectos.obtenerProyectos);
-router.get('/obtener', proyectos.obtenerProyecto);
+router.get('/unico/', proyectos.obtenerProyecto);
 
 // Crear proyecto Publico
-router.post('/crear', proyectos.crearProyecto);
+router.post('/', proyectos.crearProyecto);
 
 // Actualizar proyecto Privado/Admin
-router.put('/actualizar', proyectos.actualizarProyecto);
+router.put('/', proyectos.actualizarProyecto);
 
 // Eliminar proyecto Privado/Admin
-router.delete('/eliminar', proyectos.eliminarProyecto);
+router.delete('/', proyectos.eliminarProyecto);
 
 export { router };

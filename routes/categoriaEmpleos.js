@@ -10,15 +10,15 @@ const router = Router();
 
 // Obtener categoriaEmpleos Privado/Admin
 router.get('/', categoriaEmpleos.obtenerCategoriaEmpleos);
-router.get('/obtener', categoriaEmpleos.obtenerCategoriaEmpleo);
+router.get('/unico/', categoriaEmpleos.obtenerCategoriaEmpleo);
 
 // Crear categoriaEmpleo Publico
-router.post('/crear', categoriaEmpleos.crearCategoriaEmpleo);
+router.post('/', categoriaEmpleos.crearCategoriaEmpleo);
 
 // Actualizar categoriaEmpleo Privado/Admin
-router.put('/actualizar', categoriaEmpleos.actualizarCategoriaEmpleo);
+router.put('/', categoriaEmpleos.actualizarCategoriaEmpleo);
 
 // Eliminar categoriaEmpleo Privado/Admin
-router.delete('/eliminar', categoriaEmpleos.eliminarCategoriaEmpleo);
+router.delete('/', categoriaEmpleos.eliminarCategoriaEmpleo);
 
 export { router };

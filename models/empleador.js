@@ -14,7 +14,8 @@ const EmpleadorSchema = Schema({
     usuario: {
         type: Schema.Types.ObjectId,
         ref: 'Usuario',
-        required: true
+        required: true,
+        unique: true
     },
     estado: {
         type: Boolean,

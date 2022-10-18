@@ -10,15 +10,15 @@ const router = Router();
 
 // Obtener conversaciones Privado/Admin
 router.get('/', conversaciones.obtenerConversaciones);
-router.get('/obtener', conversaciones.obtenerConversacion);
+router.get('/unico/', conversaciones.obtenerConversacion);
 
 // Crear conversacion Publico
-router.post('/crear', conversaciones.crearConversacion);
+router.post('/', conversaciones.crearConversacion);
 
 // Actualizar conversacion Privado/Admin
-router.put('/actualizar', conversaciones.actualizarConversacion);
+router.put('/', conversaciones.actualizarConversacion);
 
 // Eliminar conversacion Privado/Admin
-router.delete('/eliminar', conversaciones.eliminarConversacion);
+router.delete('/', conversaciones.eliminarConversacion);
 
 export { router };

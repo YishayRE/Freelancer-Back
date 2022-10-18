@@ -10,15 +10,15 @@ const router = Router();
 
 // Obtener proyectoHabilidades Privado/Admin
 router.get('/', proyectoHabilidades.obtenerProyectoHabilidades);
-router.get('/obtener', proyectoHabilidades.obtenerProyectoHabilidad);
+router.get('/unico/', proyectoHabilidades.obtenerProyectoHabilidad);
 
 // Crear proyectoHabilidad Publico
-router.post('/crear', proyectoHabilidades.crearProyectoHabilidad);
+router.post('/', proyectoHabilidades.crearProyectoHabilidad);
 
 // Actualizar proyectoHabilidad Privado/Admin
-router.put('/actualizar', proyectoHabilidades.actualizarProyectoHabilidad);
+router.put('/', proyectoHabilidades.actualizarProyectoHabilidad);
 
 // Eliminar proyectoHabilidad Privado/Admin
-router.delete('/eliminar', proyectoHabilidades.eliminarProyectoHabilidad);
+router.delete('/', proyectoHabilidades.eliminarProyectoHabilidad);
 
 export { router };
